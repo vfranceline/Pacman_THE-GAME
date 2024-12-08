@@ -1,0 +1,3 @@
+/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles/Pacman_THE_GAME.dir
+/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles/edit_cache.dir
+/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles/rebuild_cache.dir
