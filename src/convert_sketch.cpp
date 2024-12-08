@@ -6,8 +6,10 @@
 
 #include "../headers/global.hpp"
 #include "../headers/convert_sketch.hpp"
+#include "../headers/pacman.hpp"
 
-std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH> convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch){
+
+std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH> convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch, Pacman& i_pacman){
 
     std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH> output_map{};
 
@@ -20,6 +22,11 @@ std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH> convert_sketch(const std::ar
                 
                 case '#':
                     output_map[j][i] = Cell::Wall;
+                    break;
+                case 'P':
+                    i_pacman.set_position(CELL_SIZE*j, CELL_SIZE*i);
+                case '.':
+                    output_map[j][i] = Cell::Pellets;
             }
         }
     }

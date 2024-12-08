@@ -1,0 +1,5 @@
+#pragma once
+
+#include "../headers/global.hpp"
+
+bool map_collision(bool i_collect_pellets, short i_x, short i_y, std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map);

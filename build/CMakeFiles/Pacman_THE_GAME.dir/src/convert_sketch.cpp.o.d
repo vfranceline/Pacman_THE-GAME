@@ -230,4 +230,5 @@ CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/global.hpp \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/convert_sketch.hpp
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp

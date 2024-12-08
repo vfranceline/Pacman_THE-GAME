@@ -19,25 +19,25 @@ int main(){
 
     std::array<std::string, MAP_HEIGHT> map_sketch = {
         " ################### ",
-		" #                 # ",
-		" #  #   #  #   ##  # ",
-		" #  #   #  #  #    # ",
-		" #  #   #  #  #    # ",
-		" #   # #   #  #    # ",
-		" #    #    #   ##  # ",
-		" #                 # ",
-		" #                 # ",
-		" #                 # ",
-		" #     ##   ##     # ",
-		" #    #  # #  #    # ",
-		" #    #   #   #    # ",
-		" #     #     #     # ",
-		" #      #   #      # ",
-		" #       # #       # ",
 		" #        #        # ",
-		" #                 # ",
-		" #                 # ",
-		" #                 # ",
+		" # ## ### # ### ## # ",
+		" #.................# ",
+		" # ## # ##### # ## # ",
+		" #    #   #   #    # ",
+		" #### ### # ### #### ",
+		"    # #       # #    ",
+		"##### # ## ## # #####",
+		"        #   #        ",
+		"##### # ##### # #####",
+		"    # #       # #    ",
+		" #### # ##### # #### ",
+		" #        #        # ",
+		" # ## ### # ### ## # ",
+		" #  #     P     #  # ",
+		" ## # # ##### # # ## ",
+		" #    #   #   #    # ",
+		" # ###### # ###### # ",
+		" #.................# ",
 		" ################### "
 
     };
@@ -50,7 +50,9 @@ int main(){
 	//Resizing the window.
 	window.setView(sf::View(sf::FloatRect(0, 0, CELL_SIZE * MAP_WIDTH, CELL_SIZE * MAP_HEIGHT)));
 
-	map = convert_sketch(map_sketch);
+	Pacman pacman;
+
+	map = convert_sketch(map_sketch, pacman);
 
     //Get the current time and store it in a variable.
 	previous_time = std::chrono::steady_clock::now();
@@ -86,6 +88,8 @@ int main(){
 				window.clear();
 
 				draw_map(map, window);
+				pacman.draw(window);
+				pacman.update(map);
 				window.display();
 			}
         }
