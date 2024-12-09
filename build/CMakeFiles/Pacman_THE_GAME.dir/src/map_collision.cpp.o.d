@@ -1,5 +1,5 @@
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o: \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/map_collision.cpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/map_collision.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/array \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -74,8 +74,8 @@ CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/map_collision.hpp \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/../headers/map_collision.hpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
  /usr/include/c++/11/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \

@@ -1,5 +1,5 @@
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/ghosts.cpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/ghosts.cpp \
  /usr/include/stdc-predef.h /usr/include/SFML/Graphics.hpp \
  /usr/include/SFML/Window.hpp /usr/include/SFML/System.hpp \
  /usr/include/SFML/Config.hpp /usr/include/SFML/System/Clock.hpp \
@@ -238,6 +238,6 @@ CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/global.hpp \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/ghosts.hpp \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/map_collision.hpp
+ /home/vic/pacman/Pacman_THE-GAME/src/../headers/global.hpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/../headers/ghosts.hpp \
+ /home/vic/pacman/Pacman_THE-GAME/src/../headers/map_collision.hpp

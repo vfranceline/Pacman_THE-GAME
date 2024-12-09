@@ -10,6 +10,9 @@ constexpr unsigned char SCREEN_RESIZE = 2;    // Fator de redimensionamento da t
 constexpr unsigned char PACMAN_SPEED = 2;
 constexpr unsigned char GHOST_SPEED = 1;
 
+constexpr unsigned char PACMAN_ANIMATION_FRAMES = 6;
+constexpr unsigned char PACMAN_ANIMATION_SPEED = 4;
+
 constexpr unsigned short FRAME_DURATION = 16667; // Duração do quadro em microssegundos
 
 // Enum para representar os tipos de células do mapa

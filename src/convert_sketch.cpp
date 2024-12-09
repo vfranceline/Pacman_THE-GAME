@@ -17,17 +17,13 @@ convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch, Pacman& 
     for (unsigned char i = 0; i < MAP_HEIGHT; i++) {
         for (unsigned char j = 0; j < MAP_WIDTH; j++) {
             switch (i_map_sketch[i][j]) {
-                case ' ':
-                    output_map[j][i] = Cell::Empty;
-                    break;
-
                 case '#':
                     output_map[j][i] = Cell::Wall;
                     break;
 
                 case '.':
                     output_map[j][i] = Cell::Pellets;
-                    break; // Corrigido para evitar comportamento incorreto
+                    break;
 
                 case 'P':
                     i_pacman.set_position(CELL_SIZE * j, CELL_SIZE * i);
@@ -38,6 +34,7 @@ convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch, Pacman& 
                     break;
 
                 default:
+                    output_map[j][i] = Cell::Empty;
                     break;
             }
         }

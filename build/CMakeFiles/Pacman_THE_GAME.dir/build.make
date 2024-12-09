@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vfran/pacman_ws/Pacman_THE-GAME
+CMAKE_SOURCE_DIR = /home/vic/pacman/Pacman_THE-GAME
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vfran/pacman_ws/Pacman_THE-GAME/build
+CMAKE_BINARY_DIR = /home/vic/pacman/Pacman_THE-GAME/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Pacman_THE_GAME.dir/depend.make
@@ -72,86 +72,86 @@ include CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: ../src/convert_sketch.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/convert_sketch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/convert_sketch.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/convert_sketch.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/convert_sketch.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/convert_sketch.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/convert_sketch.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.s
 
 CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o: ../src/draw_map.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/draw_map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/draw_map.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/draw_map.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/draw_map.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/draw_map.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/draw_map.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s
 
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: ../src/ghosts.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/ghosts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/ghosts.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/ghosts.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/ghosts.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/ghosts.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/ghosts.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.s
 
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/main.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/main.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/main.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/main.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/main.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.s
 
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o: ../src/map_collision.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/map_collision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/map_collision.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/map_collision.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/map_collision.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/map_collision.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/map_collision.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/map_collision.cpp.s
 
 CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/flags.make
 CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o: ../src/pacman.cpp
 CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o: CMakeFiles/Pacman_THE_GAME.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o -c /home/vfran/pacman_ws/Pacman_THE-GAME/src/pacman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o -MF CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o.d -o CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o -c /home/vic/pacman/Pacman_THE-GAME/src/pacman.cpp
 
 CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vfran/pacman_ws/Pacman_THE-GAME/src/pacman.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vic/pacman/Pacman_THE-GAME/src/pacman.cpp > CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.i
 
 CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vfran/pacman_ws/Pacman_THE-GAME/src/pacman.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vic/pacman/Pacman_THE-GAME/src/pacman.cpp -o CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.s
 
 # Object files for target Pacman_THE_GAME
 Pacman_THE_GAME_OBJECTS = \
@@ -176,7 +176,7 @@ Pacman_THE_GAME: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 Pacman_THE_GAME: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 Pacman_THE_GAME: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 Pacman_THE_GAME: CMakeFiles/Pacman_THE_GAME.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Pacman_THE_GAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Pacman_THE_GAME"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pacman_THE_GAME.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -188,6 +188,6 @@ CMakeFiles/Pacman_THE_GAME.dir/clean:
 .PHONY : CMakeFiles/Pacman_THE_GAME.dir/clean
 
 CMakeFiles/Pacman_THE_GAME.dir/depend:
-	cd /home/vfran/pacman_ws/Pacman_THE-GAME/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vfran/pacman_ws/Pacman_THE-GAME /home/vfran/pacman_ws/Pacman_THE-GAME /home/vfran/pacman_ws/Pacman_THE-GAME/build /home/vfran/pacman_ws/Pacman_THE-GAME/build /home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles/Pacman_THE_GAME.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vic/pacman/Pacman_THE-GAME/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vic/pacman/Pacman_THE-GAME /home/vic/pacman/Pacman_THE-GAME /home/vic/pacman/Pacman_THE-GAME/build /home/vic/pacman/Pacman_THE-GAME/build /home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles/Pacman_THE_GAME.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Pacman_THE_GAME.dir/depend
 

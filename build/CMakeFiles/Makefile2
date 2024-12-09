@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vfran/pacman_ws/Pacman_THE-GAME
+CMAKE_SOURCE_DIR = /home/vic/pacman/Pacman_THE-GAME
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vfran/pacman_ws/Pacman_THE-GAME/build
+CMAKE_BINARY_DIR = /home/vic/pacman/Pacman_THE-GAME/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/Pacman_THE_GAME.dir/clean
 CMakeFiles/Pacman_THE_GAME.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Pacman_THE_GAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Pacman_THE_GAME"
 .PHONY : CMakeFiles/Pacman_THE_GAME.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Pacman_THE_GAME.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Pacman_THE_GAME.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vfran/pacman_ws/Pacman_THE-GAME/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vic/pacman/Pacman_THE-GAME/build/CMakeFiles 0
 .PHONY : CMakeFiles/Pacman_THE_GAME.dir/rule
 
 # Convenience name for target.

@@ -1,6 +1,7 @@
 #pragma once
 
 class Pacman{
+
     unsigned char direction;
 
     Position position;

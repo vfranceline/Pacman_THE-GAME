@@ -15,11 +15,37 @@ Pacman::Pacman():
 }
 
 void Pacman::draw(sf::RenderWindow& i_window){
-    sf::CircleShape circle(CELL_SIZE /2);
-    circle.setFillColor(sf::Color(246, 202, 148));
-    circle.setPosition(position.x, position.y);
+    unsigned char frame = static_cast<unsigned char>(floor(animation_timer / static_cast<float>(PACMAN_ANIMATION_SPEED)));
 
-    i_window.draw(circle);
+    sf::Sprite sprite;
+
+    sf::Texture texture;
+
+    sprite.setPosition(position.x, position.y);
+
+    texture.loadFromFile("../images/pacman" + std::to_string(CELL_SIZE) + ".png");
+    sprite.setTexture(texture);
+    sprite.setTextureRect(sf::IntRect(CELL_SIZE * frame, CELL_SIZE * direction, CELL_SIZE, CELL_SIZE));
+
+    i_window.draw(sprite);
+
+    animation_timer = (1 + animation_timer) % (PACMAN_ANIMATION_FRAMES * PACMAN_ANIMATION_SPEED);
+}
+
+void Pacman::reset()
+{
+	animation_over = 0;
+	dead = 0;
+
+	direction = 0;
+
+	animation_timer = 0;
+	energizer_timer = 0;
+}
+
+void Pacman::set_animation_timer(unsigned short i_animation_timer)
+{
+	animation_timer = i_animation_timer;
 }
 
 void Pacman::set_position(short i_x, short i_y){
