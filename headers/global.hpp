@@ -8,6 +8,7 @@ constexpr unsigned char MAP_WIDTH = 21;       // Largura do mapa
 constexpr unsigned char SCREEN_RESIZE = 2;    // Fator de redimensionamento da tela
 
 constexpr unsigned char PACMAN_SPEED = 2;
+constexpr unsigned char GHOST_SPEED = 1;
 
 constexpr unsigned short FRAME_DURATION = 16667; // Duração do quadro em microssegundos
 

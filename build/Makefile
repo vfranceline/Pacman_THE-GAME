@@ -177,29 +177,29 @@ src/draw_map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s
 .PHONY : src/draw_map.cpp.s
 
-src/draw_text.o: src/draw_text.cpp.o
-.PHONY : src/draw_text.o
+src/ghosts.o: src/ghosts.cpp.o
+.PHONY : src/ghosts.o
 
 # target to build an object file
-src/draw_text.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.o
-.PHONY : src/draw_text.cpp.o
+src/ghosts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o
+.PHONY : src/ghosts.cpp.o
 
-src/draw_text.i: src/draw_text.cpp.i
-.PHONY : src/draw_text.i
+src/ghosts.i: src/ghosts.cpp.i
+.PHONY : src/ghosts.i
 
 # target to preprocess a source file
-src/draw_text.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.i
-.PHONY : src/draw_text.cpp.i
+src/ghosts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.i
+.PHONY : src/ghosts.cpp.i
 
-src/draw_text.s: src/draw_text.cpp.s
-.PHONY : src/draw_text.s
+src/ghosts.s: src/ghosts.cpp.s
+.PHONY : src/ghosts.s
 
 # target to generate assembly for a file
-src/draw_text.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.s
-.PHONY : src/draw_text.cpp.s
+src/ghosts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.s
+.PHONY : src/ghosts.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -288,9 +288,9 @@ help:
 	@echo "... src/draw_map.o"
 	@echo "... src/draw_map.i"
 	@echo "... src/draw_map.s"
-	@echo "... src/draw_text.o"
-	@echo "... src/draw_text.i"
-	@echo "... src/draw_text.s"
+	@echo "... src/ghosts.o"
+	@echo "... src/ghosts.i"
+	@echo "... src/ghosts.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

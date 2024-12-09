@@ -232,6 +232,6 @@ CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/ghosts.hpp \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/draw_map.hpp \
- /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/draw_text.hpp \
  /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/map_collision.hpp

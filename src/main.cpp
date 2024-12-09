@@ -5,10 +5,10 @@
 
 #include "../headers/convert_sketch.hpp"
 #include "../headers/draw_map.hpp"
-#include "../headers/draw_text.hpp"
 #include "../headers/global.hpp"
 #include "../headers/map_collision.hpp"
 #include "../headers/pacman.hpp"
+#include "../headers/ghosts.hpp"
 
 int main(){
     
@@ -27,7 +27,7 @@ int main(){
 		" #### ### # ### #### ",
 		"    # #       # #    ",
 		"##### # ## ## # #####",
-		"        #   #        ",
+		"        # g #        ",
 		"##### # ##### # #####",
 		"    # #       # #    ",
 		" #### # ##### # #### ",
@@ -52,7 +52,9 @@ int main(){
 
 	Pacman pacman;
 
-	map = convert_sketch(map_sketch, pacman);
+	Ghost ghost;
+
+	map = convert_sketch(map_sketch, pacman, ghost);
 
     //Get the current time and store it in a variable.
 	previous_time = std::chrono::steady_clock::now();
@@ -89,6 +91,7 @@ int main(){
 
 				draw_map(map, window);
 				pacman.draw(window);
+				ghost.draw(window);
 				pacman.update(map);
 				window.display();
 			}
