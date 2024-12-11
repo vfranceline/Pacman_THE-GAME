@@ -1,6 +1,7 @@
 CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: \
- /home/vic/pacman/Pacman_THE-GAME/src/main.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/11/array /usr/include/c++/11/utility \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/11/array \
+ /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -228,9 +229,9 @@ CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/ghosts.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/draw_map.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/map_collision.hpp
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/ghosts.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/draw_map.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/map_collision.hpp

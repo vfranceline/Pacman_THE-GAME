@@ -23,7 +23,7 @@ void Pacman::draw(sf::RenderWindow& i_window){
 
     sprite.setPosition(position.x, position.y);
 
-    texture.loadFromFile("../images/pacman" + std::to_string(CELL_SIZE) + ".png");
+    texture.loadFromFile("../images/Pacman" + std::to_string(CELL_SIZE) + ".png");
     sprite.setTexture(texture);
     sprite.setTextureRect(sf::IntRect(CELL_SIZE * frame, CELL_SIZE * direction, CELL_SIZE, CELL_SIZE));
 
@@ -34,13 +34,9 @@ void Pacman::draw(sf::RenderWindow& i_window){
 
 void Pacman::reset()
 {
-	animation_over = 0;
-	dead = 0;
-
 	direction = 0;
 
 	animation_timer = 0;
-	energizer_timer = 0;
 }
 
 void Pacman::set_animation_timer(unsigned short i_animation_timer)
@@ -120,4 +116,8 @@ void Pacman::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map){
         std::cout << "Pellet coletado!" << std::endl;
     }
     
+}
+
+Position Pacman::get_position(){
+    return position
 }

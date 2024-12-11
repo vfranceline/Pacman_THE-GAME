@@ -873,6 +873,7 @@ CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o: ../src/ghosts.cpp \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   ../headers/global.hpp \
+  ../headers/pacman.hpp \
   ../headers/ghosts.hpp \
   ../headers/map_collision.hpp
 

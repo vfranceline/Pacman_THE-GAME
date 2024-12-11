@@ -27,7 +27,7 @@ int main(){
 		" #### ### # ### #### ",
 		"    # #       # #    ",
 		"##### # ## ## # #####",
-		"        # g #        ",
+		"        # 0 #        ",
 		"##### # ##### # #####",
 		"    # #       # #    ",
 		" #### # ##### # #### ",
@@ -52,7 +52,7 @@ int main(){
 
 	Pacman pacman;
 
-	Ghost ghost;
+	Ghost ghost(0);
 
 	map = convert_sketch(map_sketch, pacman, ghost);
 
@@ -91,7 +91,7 @@ int main(){
 
 				draw_map(map, window);
 				pacman.draw(window);
-				ghost.draw(window);
+				ghost.draw(0, window);
 				pacman.update(map);
 				window.display();
 			}

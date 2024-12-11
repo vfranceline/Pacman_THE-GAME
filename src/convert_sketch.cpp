@@ -29,7 +29,7 @@ convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch, Pacman& 
                     i_pacman.set_position(CELL_SIZE * j, CELL_SIZE * i);
                     break;
 
-                case 'g':
+                case '0':
                     i_ghost.set_position(CELL_SIZE * j, CELL_SIZE * i);
                     break;
 

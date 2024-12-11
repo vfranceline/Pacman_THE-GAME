@@ -1,5 +1,5 @@
 CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: \
- /home/vic/pacman/Pacman_THE-GAME/src/convert_sketch.cpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/convert_sketch.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/array \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -229,7 +229,7 @@ CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp \
- /home/vic/pacman/Pacman_THE-GAME/src/../headers/../headers/ghosts.hpp
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/convert_sketch.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/global.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/pacman.hpp \
+ /home/vfran/pacman_ws/Pacman_THE-GAME/src/../headers/../headers/ghosts.hpp
