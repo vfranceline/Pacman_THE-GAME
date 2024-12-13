@@ -98,7 +98,7 @@ int main(){
 
 				pacman.update(map);
 
-				ghost_manager.reset(ghost_positions);
+				ghost_manager.update(map, pacman);
 
 				for (const std::array<Cell, MAP_HEIGHT>& column : map){
 					for (const Cell& cell : column){

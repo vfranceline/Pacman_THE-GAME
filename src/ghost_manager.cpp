@@ -24,3 +24,10 @@ void GhostManager::reset(const std::array<Position, 4>& i_ghost_positions) {
         ghosts[i].set_position(i_ghost_positions[i].x, i_ghost_positions[i].y);
     }
 }
+
+void GhostManager::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, Pacman& i_pacman){
+    for (Ghost& ghost : ghosts)
+	{
+		ghost.update(i_map, ghosts[0], i_pacman);
+	}
+}

@@ -79,8 +79,8 @@ void Ghost::draw(sf::RenderWindow& i_window){
 	face.setTexture(texture);
 	face.setPosition(position.x, position.y);
 
-    body.setColor(sf::Color(240, 158, 167));
-    face.setTextureRect(sf::IntRect(CELL_SIZE * direction, CELL_SIZE, CELL_SIZE, CELL_SIZE));
+    // body.setColor(sf::Color(240, 158, 167));
+    // face.setTextureRect(sf::IntRect(CELL_SIZE * direction, CELL_SIZE, CELL_SIZE, CELL_SIZE));
 
 
     // modo normal

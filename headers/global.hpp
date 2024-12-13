@@ -13,7 +13,7 @@ constexpr unsigned char SCREEN_RESIZE = 2;    // Fator de redimensionamento da t
 constexpr unsigned char GHOST_1_CHASE = 2; //pink - cell a frente do pacman q vai ser o alvo
 constexpr unsigned char GHOST_3_CHASE = 4; //laranja - cell q determina quando vai ficar no modo scatter ou no chase
 
-constexpr unsigned char PACMAN_SPEED = 1.5;
+constexpr unsigned char PACMAN_SPEED = 2;
 constexpr unsigned char GHOST_SPEED = 1;
 constexpr unsigned char GHOST_FRIGHTENED_SPEED = 3;
 constexpr unsigned char GHOST_ESCAPE_SPEED = 4;
@@ -22,7 +22,7 @@ constexpr unsigned char GHOST_ESCAPE_SPEED = 4;
 constexpr unsigned char PACMAN_DEATH_FRAMES = 4;
 constexpr unsigned char PACMAN_ANIMATION_FRAMES = 6;
 constexpr unsigned char PACMAN_ANIMATION_SPEED = 4;
-constexpr unsigned char GHOST_ANIMATION_FRAMES = 12;
+constexpr unsigned char GHOST_ANIMATION_FRAMES = 6;
 constexpr unsigned char GHOST_ANIMATION_SPEED = 4;
 
 

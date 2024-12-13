@@ -11,4 +11,6 @@ public:
 
     void draw(sf::RenderWindow& i_window);
     void reset(const std::array<Position, 4>& i_ghost_positions);
+    void update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, Pacman& i_pacman);
+
 };
