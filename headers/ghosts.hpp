@@ -28,7 +28,6 @@ public:
     void draw(sf::RenderWindow& i_window);
     void reset(const Position& i_home, const Position& i_home_exit);
     void set_position(short i_x, short i_y);
-    void switch_mode();
     void update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, Ghost& i_ghost_0, Pacman& i_pacman);
     void update_target(unsigned char i_pacman_direction, const Position& i_ghost_0_position, const Position& i_pacman_position);
 

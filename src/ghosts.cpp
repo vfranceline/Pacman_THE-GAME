@@ -176,10 +176,6 @@ void Ghost::set_position(short i_x, short i_y){
     position = {i_x, i_y};
 }
 
-void Ghost::switch_mode(){
-    movement_mode = 1 - movement_mode;
-}
-
 void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, Ghost& i_ghost_0, Pacman& i_pacman){
 
     bool move = 0; //o fantasma pode mover
@@ -326,7 +322,76 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
 }
 
 void Ghost::update_target(unsigned char i_pacman_direction, const Position& i_ghost_0_position, const Position& i_pacman_position){
+    
+    //se o fantasma pode usar a porta 
+    //apenas no modo fuga, dps do pacman comer ele
+    //ou quando ele precisa sair da casa
+    if (1 == use_door){
+        if (position == target){
+            //se o objetivo dele era passar pela porta
+            if (home_exit == target){
+                use_door = 0; //ele não pode mais usar a porta
+            }
+            //se o objetivo dele era voltar pra casa (dps do pacman comer ele)
+            else if (home == target){
+                frightened_mode = 0; //volta para o normal
 
+                target = home_exit; //objetivo passa a ser sair da casa
+            }
+        }
+    }
+
+    //enquanto ele estiver no modo normal e assustado 
+    else{
+        switch (id)
+        {
+            case 0: //blinky (vermelho)
+                target = i_pacman_position; //vai seguir o pacman
+                break;
+            
+            case 1: //pinky (rosa)
+            {
+                target = i_pacman_position;
+
+                switch (i_pacman_direction){
+                    case 0:
+                    {
+                        target.x += CELL_SIZE * GHOST_1_CHASE;
+                        break;
+                    }
+                    case 1:
+                    {
+                        target.y -= CELL_SIZE * GHOST_1_CHASE;
+                        break;
+                    }
+                    case 2:
+                    {
+                        target.x -= CELL_SIZE * GHOST_1_CHASE;
+                        break;
+                    }
+                    case 3:
+                    {
+                        target.y += CELL_SIZE * GHOST_1_CHASE;
+                    }
+                }
+
+                break;
+            }
+
+            case 2: // inky (azul)
+                break; //ele vai estar sempre aleatorio
+
+            case 3: //clyde (laranja)
+            {
+                if (CELL_SIZE * GHOST_3_CHASE <= sqrt(pow(position.x - i_pacman_position.x, 2) + pow(position.y - i_pacman_position.y, 2))){
+                    target = i_pacman_position;
+                }
+                else{
+                    target = {0, CELL_SIZE * (MAP_HEIGHT - 1)};
+                }
+            }
+        }
+    }
 }
 
 Position Ghost::get_position(){
