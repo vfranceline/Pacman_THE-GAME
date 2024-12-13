@@ -206,7 +206,6 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
 
     update_target(i_pacman.get_direction(), i_ghost_0.get_position(), i_pacman.get_position());
 
-// tem q mudar a função map_collision
     //verificar se há obstaculo
     walls[0] = map_collision(0, use_door, speed + position.x, position.y, i_map);
 	walls[1] = map_collision(0, use_door, position.x, position.y - speed, i_map);
@@ -221,7 +220,11 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
         move = 1;
 
         for (unsigned char a = 0; a < 4; a++){
-            if (0 == walls[a]){
+            if (a == (2 + direction) % 4){
+                continue;
+            }
+
+            else if (0 == walls[a]){
                 if (4 == optimal_direction){
                     //direção otima é a mais perto do alvo
                     optimal_direction = a;
@@ -256,7 +259,8 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
             frightened_speed_timer = GHOST_FRIGHTENED_SPEED;
 
             for(unsigned char a = 0; a < 4; a++){
-                if(0 == walls[a]) available_ways++;
+                if (a == (2 + direction) % 4) continue;
+                else if(0 == walls[a]) available_ways++;
             }
 
             //se nao tiver caminho possivel
@@ -267,6 +271,10 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
 
                 direction = random_direction;
 
+            }
+
+            else {
+                direction = (2 + direction) %4;
             }
         }
 

@@ -3,7 +3,7 @@
 class Ghost{
 
     bool use_door; //permissão para usar a porta 
-    bool movement_mode; //setar os modos entre scatter(clyde) e normal
+    // bool movement_mode; //setar os modos entre scatter(clyde) e normal
 
     unsigned short animation_timer;
 
