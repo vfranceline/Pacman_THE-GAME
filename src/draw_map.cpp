@@ -18,10 +18,13 @@ void draw_map(const std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, 
     
     sf::RectangleShape cell_shape(sf::Vector2f(CELL_SIZE, CELL_SIZE));
 
+    sf::RectangleShape door_shape(sf::Vector2f(CELL_SIZE, CELL_SIZE/4));
+
     for (unsigned char a = 0; a < MAP_WIDTH; a++)
 	{
 		for (unsigned char b = 0; b < MAP_HEIGHT; b++)
 		{
+            sprite.setPosition(static_cast<float>(CELL_SIZE * a), static_cast<float>(CELL_SIZE * b));
             cell_shape.setPosition(CELL_SIZE * a, CELL_SIZE * b);
             switch (i_map[a][b])
             {
@@ -42,6 +45,8 @@ void draw_map(const std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, 
 
                 case Cell::Door:
 				{
+                    // door_shape.setFillColor(sf::Color(0,0,255));
+                    // i_window.draw(door_shape);
 					sprite.setTextureRect(sf::IntRect(2 * CELL_SIZE, CELL_SIZE, CELL_SIZE, CELL_SIZE));
 					i_window.draw(sprite);
 					break;

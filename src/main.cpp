@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "../headers/convert_sketch.hpp"
+#include "../headers/draw_text.hpp"
 #include "../headers/draw_map.hpp"
 #include "../headers/ghost_manager.hpp"
 #include "../headers/ghosts.hpp"
@@ -30,7 +31,7 @@ int main(){
 		" #....#...#...#....# ",
 		" ####.### # ###.#### ",
 		"    #.#   0   #.#    ",
-		"#####.# ##=## #.#####",
+		"#####.# #===# #.#####",
 		"     .  #123#  .     ",
 		"#####.# ##### #.#####",
 		"    #.#       #.#    ",
@@ -50,9 +51,9 @@ int main(){
 
     sf::Event event;
 
-    sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, CELL_SIZE * MAP_HEIGHT * SCREEN_RESIZE), "PacMan - THE GAME", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, (FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT) * SCREEN_RESIZE), "PacMan - THE GAME", sf::Style::Close);
 	//Resizing the window.
-	window.setView(sf::View(sf::FloatRect(0, 0, CELL_SIZE * MAP_WIDTH, CELL_SIZE * MAP_HEIGHT)));
+	window.setView(sf::View(sf::FloatRect(0, 0, CELL_SIZE * MAP_WIDTH, FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT)));
 
 	std::array<Position, 4> ghost_positions;
 
@@ -130,12 +131,16 @@ int main(){
 
 				pacman.draw(game_won, window);
 
-				window.display();
-
-				if(1 == game_won && 0 == pacman.get_dead()){
-					// delay(5000);
-					window.close();
+				if (1 == pacman.get_animation_over()){
+					if(1 == game_won){
+						draw_text(1, 0, 0, "Winner!!! :)", window);
+					}
+					else{
+						draw_text(1, 0, 0, "you lost :/", window);
+					}
 				}
+
+				window.display();
 				
 			}
         }

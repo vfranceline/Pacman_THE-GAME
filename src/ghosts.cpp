@@ -141,10 +141,9 @@ void Ghost::draw(sf::RenderWindow& i_window){
 
 		i_window.draw(body);
 	}
-	//modo dps do pacman devorar a alma do fantasma
+	//modo só os olhos dps do pacman devorar a alma do fantasma
 	else
 	{
-		//We only draw the face because Pacman stole the body.
 		face.setTextureRect(sf::IntRect(CELL_SIZE * direction, 2 * CELL_SIZE, CELL_SIZE, CELL_SIZE));
 	}
 
@@ -168,7 +167,8 @@ void Ghost::reset(const Position& i_home, const Position& i_home_exit){
 
     home = i_home;
     home_exit = i_home_exit;
-    target = i_home_exit;
+    
+    // position = home;
 
 }
 
@@ -178,7 +178,7 @@ void Ghost::set_position(short i_x, short i_y){
 
 void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, Ghost& i_ghost_0, Pacman& i_pacman){
 
-    bool move = 0; //o fantasma pode mover
+    bool move = 0; //o fantasma pode mover?
 
     //se for maior doq 1, o fantasma está em uma interseção
     //n considera a volta como um caminho possivel
@@ -220,6 +220,7 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
         move = 1;
 
         for (unsigned char a = 0; a < 4; a++){
+            //impede os fantasmas de virarem para tras (só se for necessario)
             if (a == (2 + direction) % 4){
                 continue;
             }
@@ -231,6 +232,7 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
                 }
 
                 available_ways++;
+
                 if (get_target_distance(a) < get_target_distance(optimal_direction)){
                     optimal_direction = a;
                 }
@@ -274,7 +276,8 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
             }
 
             else {
-                direction = (2 + direction) %4;
+                //se não tiver jeito, aí ele pode virar de costas para sair da posição
+                direction = (2 + direction) % 4;
             }
         }
 
@@ -324,7 +327,7 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
         else {
             use_door = 1; //habilita o uso da porta
             frightened_mode = 2; //ativa o modo fuga
-            target = home; //alvo passa a ser a casa
+            target = home_exit; //alvo passa a ser a casa
         }
     }
 }
@@ -396,6 +399,9 @@ void Ghost::update_target(unsigned char i_pacman_direction, const Position& i_gh
                 }
                 else{
                     target = {0, CELL_SIZE * (MAP_HEIGHT - 1)};
+                    if (position == target){
+                        target = {0, 0};
+                    }
                 }
             }
         }

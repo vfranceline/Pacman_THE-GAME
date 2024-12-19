@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Pacman_THE_GAME.dir/src/convert_sketch.cpp.o.d"
   "CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o"
   "CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.o.d"
+  "CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.o"
+  "CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.o.d"
   "CMakeFiles/Pacman_THE_GAME.dir/src/ghost_manager.cpp.o"
   "CMakeFiles/Pacman_THE_GAME.dir/src/ghost_manager.cpp.o.d"
   "CMakeFiles/Pacman_THE_GAME.dir/src/ghosts.cpp.o"

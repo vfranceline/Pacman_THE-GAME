@@ -177,6 +177,30 @@ src/draw_map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_map.cpp.s
 .PHONY : src/draw_map.cpp.s
 
+src/draw_text.o: src/draw_text.cpp.o
+.PHONY : src/draw_text.o
+
+# target to build an object file
+src/draw_text.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.o
+.PHONY : src/draw_text.cpp.o
+
+src/draw_text.i: src/draw_text.cpp.i
+.PHONY : src/draw_text.i
+
+# target to preprocess a source file
+src/draw_text.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.i
+.PHONY : src/draw_text.cpp.i
+
+src/draw_text.s: src/draw_text.cpp.s
+.PHONY : src/draw_text.s
+
+# target to generate assembly for a file
+src/draw_text.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman_THE_GAME.dir/build.make CMakeFiles/Pacman_THE_GAME.dir/src/draw_text.cpp.s
+.PHONY : src/draw_text.cpp.s
+
 src/ghost_manager.o: src/ghost_manager.cpp.o
 .PHONY : src/ghost_manager.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... src/draw_map.o"
 	@echo "... src/draw_map.i"
 	@echo "... src/draw_map.s"
+	@echo "... src/draw_text.o"
+	@echo "... src/draw_text.i"
+	@echo "... src/draw_text.s"
 	@echo "... src/ghost_manager.o"
 	@echo "... src/ghost_manager.i"
 	@echo "... src/ghost_manager.s"

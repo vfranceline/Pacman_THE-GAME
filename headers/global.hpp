@@ -8,6 +8,7 @@ constexpr unsigned char CELL_SIZE = 16;        // Tamanho da célula
 constexpr unsigned char MAP_HEIGHT = 21;      // Altura do mapa
 constexpr unsigned char MAP_WIDTH = 21;       // Largura do mapa
 constexpr unsigned char SCREEN_RESIZE = 2;    // Fator de redimensionamento da tela
+constexpr unsigned char FONT_HEIGHT = 16;
 
 //
 constexpr unsigned char GHOST_1_CHASE = 2; //pink - cell a frente do pacman q vai ser o alvo
@@ -35,7 +36,8 @@ enum class Cell : uint8_t {
     Wall,
     Pellets,
     Energizer,
-    Door
+    Door,
+    Home
 };
 
 struct Position
