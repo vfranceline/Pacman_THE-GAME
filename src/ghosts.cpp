@@ -267,7 +267,7 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
 
             //se nao tiver caminho possivel
             if (0 < available_ways){
-                while (1 == walls[random_direction]){
+                while (1 == walls[random_direction] || random_direction == (2 + direction) % 4){
                     random_direction = rand() % 4; //fica pegando direções aleatorias até poder ir para direção
                 }
 
