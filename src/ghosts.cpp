@@ -207,10 +207,10 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
     update_target(i_pacman.get_direction(), i_ghost_0.get_position(), i_pacman.get_position());
 
     //verificar se há obstaculo
-    walls[0] = map_collision(0, use_door, speed + position.x, position.y, i_map);
-	walls[1] = map_collision(0, use_door, position.x, position.y - speed, i_map);
-	walls[2] = map_collision(0, use_door, position.x - speed, position.y, i_map);
-	walls[3] = map_collision(0, use_door, position.x, speed + position.y, i_map);
+    walls[0] = map_collision(0, use_door, speed + position.x, position.y, i_map, score);
+	walls[1] = map_collision(0, use_door, position.x, position.y - speed, i_map, score);
+	walls[2] = map_collision(0, use_door, position.x - speed, position.y, i_map, score);
+	walls[3] = map_collision(0, use_door, position.x, speed + position.y, i_map, score);
 
     // no modo normal e fuga ele vai calcular o melhor caminho para o alvo, seja o pacman ou a casa
     if (1 != frightened_mode){
@@ -328,6 +328,7 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
             use_door = 1; //habilita o uso da porta
             frightened_mode = 2; //ativa o modo fuga
             target = home_exit; //alvo passa a ser a casa
+            score += 200;
         }
     }
 }

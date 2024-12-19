@@ -12,6 +12,7 @@
 #include "../headers/map_collision.hpp"
 #include "../headers/pacman.hpp"
 
+int score = 0;
 
 int main(){
 
@@ -117,6 +118,21 @@ int main(){
 					pacman.set_animation_timer(0);
 				}	
 			}
+			else if (1 == sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) //Restarting the game.
+			{
+				game_won = 0;
+
+				if (1 == pacman.get_dead())
+				{
+					score = 0;
+				}
+
+				map = convert_sketch(map_sketch, pacman, ghost_positions);
+
+				ghost_manager.reset(ghost_positions);
+
+				pacman.reset();
+			}
 
 			if (FRAME_DURATION > lag){
 
@@ -127,16 +143,18 @@ int main(){
 
 					ghost_manager.draw(window);
 
+					draw_text(0, 0, CELL_SIZE * MAP_HEIGHT, "Score: " + std::to_string(0 + score), window);
+
 				}
 
 				pacman.draw(game_won, window);
 
 				if (1 == pacman.get_animation_over()){
 					if(1 == game_won){
-						draw_text(1, 0, 0, "Winner!!! :)", window);
+						draw_text(1, 0, 0, "Winner!!! :)\n final score: " + std::to_string(0 + score), window);
 					}
 					else{
-						draw_text(1, 0, 0, "you lost :/", window);
+						draw_text(1, 0, 0, "you lost :/ \n press enter to restart the game \n\n final score: " + std::to_string(0 + score), window);
 					}
 				}
 

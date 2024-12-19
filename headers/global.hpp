@@ -2,6 +2,8 @@
 
 #include <cstdint> // Para tipos inteiros explícitos
 
+extern int score;
+
 //utilizando unsigned char para economizar memoria
 
 constexpr unsigned char CELL_SIZE = 16;        // Tamanho da célula
@@ -36,8 +38,7 @@ enum class Cell : uint8_t {
     Wall,
     Pellets,
     Energizer,
-    Door,
-    Home
+    Door
 };
 
 struct Position

@@ -25,10 +25,6 @@ convert_sketch(const std::array<std::string, MAP_HEIGHT>& i_map_sketch, Pacman& 
                     output_map[j][i] = Cell::Door;
                     break;
 
-                case 'h':
-                    output_map[j][i] = Cell::Home;
-                    break;
-
                 case '.':
                     output_map[j][i] = Cell::Pellets;
                     break;

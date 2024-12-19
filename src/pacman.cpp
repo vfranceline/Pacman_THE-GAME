@@ -100,10 +100,10 @@ void Pacman::set_position(short i_x, short i_y){
 void Pacman::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map){
 
     std::array<bool, 4> walls{};
-	walls[0] = map_collision(0, 0, PACMAN_SPEED + position.x, position.y, i_map);
-	walls[1] = map_collision(0, 0, position.x, position.y - PACMAN_SPEED, i_map);
-	walls[2] = map_collision(0, 0, position.x - PACMAN_SPEED, position.y, i_map);
-	walls[3] = map_collision(0, 0, position.x, PACMAN_SPEED + position.y, i_map);
+	walls[0] = map_collision(0, 0, PACMAN_SPEED + position.x, position.y, i_map, score);
+	walls[1] = map_collision(0, 0, position.x, position.y - PACMAN_SPEED, i_map, score);
+	walls[2] = map_collision(0, 0, position.x - PACMAN_SPEED, position.y, i_map, score);
+	walls[3] = map_collision(0, 0, position.x, PACMAN_SPEED + position.y, i_map, score);
 
 
     if (1 ==sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
@@ -159,18 +159,12 @@ void Pacman::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map){
 		position.x = PACMAN_SPEED - CELL_SIZE;
 	}
 
-    if (1 == map_collision(1, 0, position.x, position.y, i_map)){
+    if (1 == map_collision(1, 0, position.x, position.y, i_map, score)){
         energizer_timer = static_cast<unsigned short>(ENERGIZER_DURATION);
     }
     else{
         energizer_timer = std::max(0, energizer_timer - 1);
     }
-
-    // // Coleta de pellets
-    // if (map_collision(true, position.x, position.y, i_map)){
-    //     //add lógica para incrementar pontuação aqui.
-    //     std::cout << "Pellet coletado!" << std::endl;
-    // }
     
 }
 

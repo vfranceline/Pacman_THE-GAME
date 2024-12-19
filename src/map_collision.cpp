@@ -4,20 +4,20 @@
 #include "../headers/map_collision.hpp"
 #include "../headers/global.hpp"
 
-bool check_and_update_cell(int cell_x, int cell_y, bool i_collect_pellets, std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map) {
-    if (cell_x >= 0 && cell_x < MAP_WIDTH && cell_y >= 0 && cell_y < MAP_HEIGHT) {
-        Cell& cell = i_map[cell_x][cell_y];
-        if (cell == Cell::Wall) {
-            return true; // colisão detectada
-        }
-        if (i_collect_pellets && cell == Cell::Pellets) {
-            cell = Cell::Empty; // coleta de pellet
-        }
-    }
-    return false; // nenhuma colisão
-}
+// bool check_and_update_cell(int cell_x, int cell_y, bool i_collect_pellets, std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map) {
+//     if (cell_x >= 0 && cell_x < MAP_WIDTH && cell_y >= 0 && cell_y < MAP_HEIGHT) {
+//         Cell& cell = i_map[cell_x][cell_y];
+//         if (cell == Cell::Wall) {
+//             return true; // colisão detectada
+//         }
+//         if (i_collect_pellets && cell == Cell::Pellets) {
+//             cell = Cell::Empty; // coleta de pellet
+//         }
+//     }
+//     return false; // nenhuma colisão
+// }
 
-bool map_collision(bool i_collect_pellets, bool i_use_door, short i_x, short i_y, std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map) {
+bool map_collision(bool i_collect_pellets, bool i_use_door, short i_x, short i_y, std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, int& i_score) {
     bool output = false;
 
     float cell_x = i_x / static_cast<float>(CELL_SIZE);
@@ -79,10 +79,16 @@ bool map_collision(bool i_collect_pellets, bool i_use_door, short i_x, short i_y
 					output = 1;
 
 					i_map[x][y] = Cell::Empty;
+
+                    score += 50; // Incrementa 50 pontos pelo energizer
+
 				}
 				else if (Cell::Pellets == i_map[x][y])
 				{
 					i_map[x][y] = Cell::Empty;
+
+                    score += 10; // Incrementa 50 pontos pelo energizer
+
 				}
 			}
 		}
