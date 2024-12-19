@@ -2,6 +2,10 @@
 #include <chrono>
 #include <ctime>
 #include <SFML/Graphics.hpp>
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <algorithm>
 
 #include "../headers/convert_sketch.hpp"
 #include "../headers/draw_text.hpp"
@@ -12,7 +16,85 @@
 #include "../headers/map_collision.hpp"
 #include "../headers/pacman.hpp"
 
+#define MAX_SCORES 5  // Número máximo de scores a serem armazenados
 int score = 0;
+
+void load_scores(int* scores, int& size, const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (file == NULL) {
+        // Se o arquivo não existir, inicializa com zeros
+        size = 0;
+        return;
+    }
+
+    int i = 0;
+    while (fscanf(file, "%d", &scores[i]) != EOF && i < MAX_SCORES) {
+        i++;
+    }
+    size = i;
+
+    // Se o número de scores for menor que o máximo, preenche com zeros
+    for (int j = size; j < MAX_SCORES; ++j) {
+        scores[j] = 0;
+    }
+
+    fclose(file);
+
+    // Ordena os scores em ordem decrescente
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (scores[i] < scores[j]) {
+                int temp = scores[i];
+                scores[i] = scores[j];
+                scores[j] = temp;
+            }
+        }
+    }
+}
+
+
+void save_scores(int* scores, int size, const char* filename) {
+    FILE* file = fopen(filename, "w");
+    if (file == NULL) {
+        perror("erro ao abrir arquivo");
+        return;
+    }
+
+    for (int i = 0; i < size; i++) {
+        fprintf(file, "%d\n", scores[i]);
+    }
+
+    fclose(file);
+}
+
+
+// Função para adicionar um novo score
+void add_score(int new_score, int* scores, int& size) {
+    // Se ainda houver espaço no array para um novo score
+    if (size < MAX_SCORES) {
+        // Adiciona o novo score na última posição disponível
+        scores[size] = new_score;
+        size++;
+    } else {
+        // Se já há 5 scores, substitui o menor score se o novo for maior
+        if (new_score > scores[MAX_SCORES - 1]) {
+            scores[MAX_SCORES - 1] = new_score;
+        }
+    }
+
+    // Agora ordena os scores em ordem decrescente
+    for (int i = size - 1; i > 0; --i) {
+        if (scores[i] > scores[i - 1]) {
+            int temp = scores[i];
+            scores[i] = scores[i - 1];
+            scores[i - 1] = temp;
+        } else {
+            break;  // Interrompe a ordenação se já estiver na posição correta
+        }
+    }
+}
+
+
 
 int main(){
 
@@ -20,6 +102,10 @@ int main(){
     
     //criando uma janela
     unsigned lag = 0;
+
+	int size = 0;
+
+	int* scores = new int[MAX_SCORES]; // Aloca o array para os top 5 scores
 
     std::chrono::time_point<std::chrono::steady_clock>previous_time;
 
@@ -65,6 +151,8 @@ int main(){
 	map = convert_sketch(map_sketch, pacman, ghost_positions);
 
 	ghost_manager.reset(ghost_positions);
+
+	load_scores(scores, size, "../data/highscores.txt");
 
     //Get the current time and store it in a variable.
 	previous_time = std::chrono::steady_clock::now();
@@ -150,12 +238,23 @@ int main(){
 				pacman.draw(game_won, window);
 
 				if (1 == pacman.get_animation_over()){
-					if(1 == game_won){
-						draw_text(1, 0, 0, "Winner!!! :)\n final score: " + std::to_string(0 + score), window);
+					add_score(score, scores, size);
+					save_scores(scores, size, "../data/highscores.txt");
+
+					window.clear();
+
+					if (1 == game_won) {
+						draw_text(1, 0, 0, "Winner!!! :) \n press enter to restart the game \n or spacebar for see the highscores. \n\n final score: " + std::to_string(0 + score), window);
+					} else {
+						draw_text(1, 0, 0, "you lost :/ \n press enter to restart the game \n or spacebar for see the highscores. \n\n final score: " + std::to_string(0 + score), window);
 					}
-					else{
-						draw_text(1, 0, 0, "you lost :/ \n press enter to restart the game \n\n final score: " + std::to_string(0 + score), window);
+
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+						window.clear(); // Limpa a tela para exibir os scores
+						display_scores(scores, window);
+						window.display();
 					}
+
 				}
 
 				window.display();
@@ -163,4 +262,7 @@ int main(){
 			}
         }
     }
+
+	delete[] scores;  // Libera a memória alocada
+
 }

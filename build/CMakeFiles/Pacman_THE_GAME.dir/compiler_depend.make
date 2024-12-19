@@ -1760,6 +1760,10 @@ CMakeFiles/Pacman_THE_GAME.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc \
   ../headers/convert_sketch.hpp \
   ../headers/global.hpp \
   ../headers/pacman.hpp \
@@ -2166,6 +2170,8 @@ CMakeFiles/Pacman_THE_GAME.dir/src/pacman.cpp.o: ../src/pacman.cpp \
 ../src/pacman.cpp:
 
 ../src/map_collision.cpp:
+
+/usr/include/c++/11/stdlib.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 

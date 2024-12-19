@@ -4,6 +4,8 @@
 #include "../headers/draw_text.hpp"
 #include "../headers/global.hpp"
 
+#define MAX_SCORES 5
+
 void draw_text(bool i_center, unsigned short i_x, unsigned short i_y, const std::string& i_text, sf::RenderWindow& i_window){
     short character_x = i_x;
 	short character_y = i_y;
@@ -53,4 +55,16 @@ void draw_text(bool i_center, unsigned short i_x, unsigned short i_y, const std:
 
 		i_window.draw(character_sprite);
 	}
+}
+
+// Função para exibir os 5 melhores scores
+void display_scores(int scores[], sf::RenderWindow& i_window) {
+
+    std::string high_scores_text = "===== Top 5 Scores =====\n";
+
+    for (int i = 0; i < MAX_SCORES; i++) {
+        high_scores_text += std::to_string(scores[i]) + "\n";
+    }
+
+    draw_text(1, 0, 0, high_scores_text, i_window);
 }
