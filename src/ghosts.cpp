@@ -333,79 +333,51 @@ void Ghost::update(std::array<std::array<Cell, MAP_HEIGHT>, MAP_WIDTH>& i_map, G
 }
 
 void Ghost::update_target(unsigned char i_pacman_direction, const Position& i_ghost_0_position, const Position& i_pacman_position){
-    
-    //se o fantasma pode usar a porta 
-    //apenas no modo fuga, dps do pacman comer ele
-    //ou quando ele precisa sair da casa
-    if (1 == use_door){
-        if (position == target){
-            //se o objetivo dele era passar pela porta
-            if (home_exit == target){
-                use_door = 0; //ele não pode mais usar a porta
-            }
-            //se o objetivo dele era voltar pra casa (dps do pacman comer ele)
-            else if (home == target){
-                frightened_mode = 0; //volta para o normal
 
-                target = home_exit; //objetivo passa a ser sair da casa
-            }
+    if (frightened_mode == 2) { 
+        // Quando está no modo capturado, ajustar o alvo para casa
+        if (position == home_exit) {
+            target = home; // Vai para dentro da casa
+        } else if (position == home) {
+            frightened_mode = 0; // Sai do modo capturado
+            use_door = true;     // Permite sair da casa
+            target = home_exit;  // Alvo passa a ser a saída
         }
+        return; // Não precisa calcular outros alvos
     }
 
-    //enquanto ele estiver no modo normal e assustado 
-    else{
-        switch (id)
-        {
-            case 0: //blinky (vermelho)
-                target = i_pacman_position; //vai seguir o pacman
-                break;
-            
-            case 1: //pinky (rosa)
-            {
+    // Outros modos seguem aqui (normal ou assustado)
+    switch (id) {
+        case 0: // Blinky (vermelho)
+            target = i_pacman_position; // Segue o Pacman
+            break;
+
+        case 1: // Pinky (rosa)
+            // Direção do Pacman ajustada conforme sua posição
+            target = i_pacman_position;
+            switch (i_pacman_direction) {
+                case 0: target.x += CELL_SIZE * GHOST_1_CHASE; break; // Direita
+                case 1: target.y -= CELL_SIZE * GHOST_1_CHASE; break; // Cima
+                case 2: target.x -= CELL_SIZE * GHOST_1_CHASE; break; // Esquerda
+                case 3: target.y += CELL_SIZE * GHOST_1_CHASE; break; // Baixo
+            }
+            break;
+
+        case 2: // Inky (azul)
+            // Movimento aleatório já tratado
+            break;
+
+        case 3: // Clyde (laranja)
+            // Se está longe do Pacman, persegue-o, caso contrário, volta ao canto
+            if (sqrt(pow(position.x - i_pacman_position.x, 2) + pow(position.y - i_pacman_position.y, 2)) > CELL_SIZE * GHOST_3_CHASE) {
                 target = i_pacman_position;
-
-                switch (i_pacman_direction){
-                    case 0:
-                    {
-                        target.x += CELL_SIZE * GHOST_1_CHASE;
-                        break;
-                    }
-                    case 1:
-                    {
-                        target.y -= CELL_SIZE * GHOST_1_CHASE;
-                        break;
-                    }
-                    case 2:
-                    {
-                        target.x -= CELL_SIZE * GHOST_1_CHASE;
-                        break;
-                    }
-                    case 3:
-                    {
-                        target.y += CELL_SIZE * GHOST_1_CHASE;
-                    }
-                }
-
-                break;
+            } else {
+                target = {0, CELL_SIZE * (MAP_HEIGHT - 1)}; // Ponto no canto
+                if (position == target) target = {0, 0};    // Alterna entre os cantos
             }
-
-            case 2: // inky (azul)
-                break; //ele vai estar sempre aleatorio
-
-            case 3: //clyde (laranja)
-            {
-                if (CELL_SIZE * GHOST_3_CHASE <= sqrt(pow(position.x - i_pacman_position.x, 2) + pow(position.y - i_pacman_position.y, 2))){
-                    target = i_pacman_position;
-                }
-                else{
-                    target = {0, CELL_SIZE * (MAP_HEIGHT - 1)};
-                    if (position == target){
-                        target = {0, 0};
-                    }
-                }
-            }
-        }
+            break;
     }
+    
 }
 
 Position Ghost::get_position(){
